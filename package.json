@@ -1,8 +1,9 @@
 {
   "name": "@thedaviddias/mcp-llms-txt-explorer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A Model Context Protocol server for exploring websites with llms.txt files",
   "type": "module",
+  "exports": "./build/index.js",
   "bin": {
     "mcp-llms-txt-explorer": "./build/index.js"
   },
@@ -20,7 +21,7 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "0.6.0",
     "@types/node-fetch": "^2.6.12",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^2.7.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
@@ -34,7 +35,7 @@
   ],
   "packageManager": "pnpm@9.15.0",
   "engines": {
-    "node": ">=20"
+    "node": ">=18"
   },
   "author": "David Dias",
   "license": "MIT",
