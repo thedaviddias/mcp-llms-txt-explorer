@@ -1,0 +1,43 @@
+name: Release to npm
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install
+        uses: ./.github/actions/install
+        with:
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@thedaviddias'
+
+      - name: Setup npm auth
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          echo "@thedaviddias:registry=https://registry.npmjs.org/" >> ~/.npmrc
+          npm whoami || echo "Not logged in to npm"
+
+      - name: Build
+        run: pnpm build
+
+      - name: Publish
+        run: |
+          echo "Attempting to publish with npm..."
+          npm publish --access public || {
+            echo "npm publish failed, trying with pnpm..."
+            pnpm publish --no-git-checks --access public
+          }
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_REGISTRY: 'https://registry.npmjs.org'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
