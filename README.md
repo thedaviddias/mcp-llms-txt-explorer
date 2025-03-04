@@ -1,5 +1,7 @@
 # MCP LLMS.txt Explorer
 
+[![smithery badge](https://smithery.ai/badge/@thedaviddias/mcp-llms-txt-explorer)](https://smithery.ai/server/@thedaviddias/mcp-llms-txt-explorer)
+
 A Model Context Protocol server for exploring websites with llms.txt files. This server helps you discover and analyze websites that implement the llms.txt standard.
 
 ## Features
@@ -36,6 +38,15 @@ pnpm run watch
 
 ## Installation
 
+### Installing via Smithery
+
+To install mcp-llms-txt-explorer for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@thedaviddias/mcp-llms-txt-explorer):
+
+```bash
+npx -y @smithery/cli install @thedaviddias/mcp-llms-txt-explorer --client claude
+```
+
+### Installing Manually
 To use this server:
 
 ```bash
