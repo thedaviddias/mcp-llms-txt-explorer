@@ -1,5 +1,9 @@
 # MCP LLMS.txt Explorer
 
+<a href="https://glama.ai/mcp/servers/lhyj3pva0z">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/lhyj3pva0z/badge" alt="LLMS.txt Explorer MCP server" />
+</a>
+
 [![smithery badge](https://smithery.ai/badge/@thedaviddias/mcp-llms-txt-explorer)](https://smithery.ai/server/@thedaviddias/mcp-llms-txt-explorer)
 
 A Model Context Protocol server for exploring websites with llms.txt files. This server helps you discover and analyze websites that implement the llms.txt standard.
