@@ -76,7 +76,8 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 {
   "mcpServers": {
     "llms-txt-explorer": {
-      "command": "/path/to/llms-txt-explorer/build/index.js"
+      "command": "node",
+      "args": ["/path/to/llms-txt-explorer/build/index.js"],
     }
   }
 }
