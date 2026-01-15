@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/thedaviddias-mcp-llms-txt-explorer-badge.png)](https://mseep.ai/app/thedaviddias-mcp-llms-txt-explorer)
+
 # MCP LLMS.txt Explorer
 
 <a href="https://glama.ai/mcp/servers/lhyj3pva0z">
